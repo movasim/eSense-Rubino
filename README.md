@@ -11,8 +11,6 @@
 
 
 
-
-
 ## Feature Description
 
 **Indoor Air Quality or “IAQ”** is a term that refers to the quality of the air in and around buildings and structures, especially as it relates to the health and comfort of its occupants. Indoor air quality can be affected by gases, *(including carbon monoxide, radon, volatile organic compounds)*, particulate matter, contaminating microbes *(mold, bacteria)* or any material that can induce adverse conditions for the Health. 
@@ -59,8 +57,6 @@ enviroSense and MOVASIM's Platfom is uses the MQTT protocol to communicate with 
 
 
 
-
-
 ## eSense Rubino Schematic, PCB, BOM and Power Supply specs
 
 eSense Rubino Schematic and PCB design have been developed with [EasyEDA](https://easyeda.com) and [published here under CC-BY-SA-4.0 License](https://easyeda.com/gdidonato/esense-rubino). The latest Release is also available as a ZIP package in this Repository.
@@ -93,8 +89,6 @@ Below is the BOM for eSense Rubino PCB assembly. For Protoboard assembly, check 
 ### Power Supply specifications
 
 eSense Rubino could be powered with almost any Mobile Phone battery charger, as it only drains 100 mA CC. It uses the on-board MicroB USB connector provided by NodeMCU board. 
-
-
 
 
 
@@ -157,8 +151,6 @@ The IAQ accuracy is reflects the current state of the background sensor calibrat
 - **IAQ Accuracy = 3** means BSEC calibrated successfully.
 
 IoTek-enviro service takes care of dealing with IAQ Accuracy parameter, showing in the Dashboard high-levell information for the end user.
-
-
 
 
 
@@ -236,15 +228,11 @@ The module that we use for eSense Rubino could be GY-30/GY-302, depending on mar
 
 
 
-
-
 ## Protoboard Assembly
 
 Atrough we have released a PCB version for eSense Rubino that can be downloaded and assembled, it is also possible to build the device in a Protoboard, as seen in the images below. The only difference when buying components, is to get a NeoPixel Module instead of the standalone component version *(so you don't need to buy the NeoPixel LED nor both capacitors C1 and C2, as they will be part of the Module)*. Also, there is no need for the Jumper, as ca be simulared just with a cable.
 
 ![images/eSense-Rubino-Proto.png](images/eSense-Rubino-Proto.png)
-
-
 
 
 
