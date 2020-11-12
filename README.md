@@ -3,7 +3,7 @@
 
 **eSense** **Rubino** has been designed to work with the **IoTek-enviro** service provided by [MOVASIM](http://movasim.com/). This service focuses on monitoring human well-being conditions for several scenarios *(for instance offices, buildings, factories, senior living, universities and schools).* 
 
-**eSense Rubino** is mainly used for testing, demos and small deployments where no industrial devices are requiered. We published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek-enviro** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Asembly), on a [PCB](), or get completely [assembled by us]().
+**eSense Rubino** is mainly used for testing, demos and small deployments where no industrial devices are requiered. We published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek-enviro** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Asembly), on a [PCB](#eSense-Rubino-Schematic,-PCB,-BOM-and-Power-Supply-specs), or get completely [assembled by us](mailto:info@movasim.com).
 
 ![images/eSense-Rubino.png](images/eSense-Rubino-PCB.png)
 
@@ -11,13 +11,15 @@
 
 
 
+
+
 ## Feature Description
 
 **Indoor Air Quality or “IAQ”** is a term that refers to the quality of the air in and around buildings and structures, especially as it relates to the health and comfort of its occupants. Indoor air quality can be affected by gases, *(including carbon monoxide, radon, volatile organic compounds)*, particulate matter, contaminating microbes *(mold, bacteria)* or any material that can induce adverse conditions for the Health. 
 
-**eSense Rubino** includes [Bosch's BME680 Gas Sensor](#Bosch-BME680), allowing the device to detect a broad range of gases to measure indoor air quality for personal well being. Gases that can be detected include: Volatile Organic Compounds *(VOC)* from paints *(such as formaldehyde)*, lacquers, paint strippers, cleaning supplies, furnishings, office equipment, glues, adhesives and alcohol.
+**eSense Rubino** includes [Bosch's BME680 Gas Sensor](#Bosch-BME680-Sensor), allowing the device to detect a broad range of gases to measure indoor air quality for personal well being. Gases that can be detected include: Volatile Organic Compounds *(VOC)* from paints *(such as formaldehyde)*, lacquers, paint strippers, cleaning supplies, furnishings, office equipment, glues, adhesives and alcohol.
 
-Based on [Bosch's BSEC Library algorithm](), the sensor provides an index for air quality *(IAQ)* output. In principle, this output is in an index that can have values between 0 and 500 with a resolution of 1 to indicate or quantify the quality of the air available in the surrounding. Detailed classification of  IAQ index provided by Bosch is described in the [Bosch BME680 Section](#Bosch-BME680).
+Based on [Bosch's BSEC Library algorithm](https://github.com/BoschSensortec/BSEC-Arduino-library), the sensor provides an index for air quality *(IAQ)* output. In principle, this output is in an index that can have values between 0 and 500 with a resolution of 1 to indicate or quantify the quality of the air available in the surrounding. Detailed classification of  IAQ index provided by Bosch is described in the [Bosch BME680 Section](#Bosch-BME680-Sensor).
 
 Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color coding can se seen below:
 
@@ -36,7 +38,7 @@ Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color c
 | Color.Coding | Meaning                                                      |
 | :----------: | ------------------------------------------------------------ |
 |    White     | The device is in WiFi Acces Point (AP) Mode or trying to connect to the WiFi network with the latest provided credentials. |
-|     Blue     | The device is connected to the selected WiFi Network, and BME680 sensor is calibrating *(IAQ Accuracy = 0)*. See [BME680 Sensor](#BME680-Sensor) for detailed information. |
+|     Blue     | The device is connected to the selected WiFi Network, and BME680 sensor is calibrating *(IAQ Accuracy = 0)*. See [BME680 Sensor](#Bosch-BME680-Sensor) for detailed information. |
 
 **eSense Rubino** also integrates a Luxometer to measure ambient lighting quality, which is interpreted by **MOVASIM's IoTek-enviro** service based on [**European Standard EN 12464-1**](https://www.en-standard.eu/din-en-12464-1-light-and-lighting-lighting-of-work-places-part-1-indoor-work-places/?mena=8) to display the **Ambient Lighting Quality Indicator**. This standard highlights the minimum illuminance requirements of specific areas, as described in the following table:
 
@@ -51,9 +53,11 @@ Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color c
 | Wardrobe                          | 200  |
 | Classrooms                        | 500  |
 
-**Temperature and relative humidity** affect the perception of comfort in an indoor environment.  The perception of thermal comfort is related to one’s metabolic heat  production, the transfer of heat to the environment, physiological  adjustments, and body temperature. Heat transfer from the body to the  environment is influenced by factors such as temperature, humidity, air  movement, personal activities, and clothing. The [ANSI/ASHRAE Standard 55-2013: Thermal Environmental Conditions for Human Occupancy](ANSI/ASHRAE Standard 55-2013: Thermal Environmental Conditions for Human Occupancy) specifies the combinations of indoor environmental and personal factors that produce acceptable thermal conditions to a majority of occupants  within a space. Assuming slow air movement *(less  than 40 feet per minute)* and 50% indoor relative humidity, the operative temperatures recommended by ASHRAE range from 68.5ºF to 75ºF in the winter, and from 75ºF to 80.5ºF in the summer. The difference in temperature ranges between the seasons is largely due to clothing selection. ASHRAE also recommends that  indoor relative humidity be maintained at or below 65%. [The U.S. Environmental Protection Agency *(EPA)*]() recommends maintaining indoor relative humidity between 30 and 60% to reduce mold growth. 
+**Temperature and relative humidity** affect the perception of comfort in an indoor environment.  The perception of thermal comfort is related to one’s metabolic heat  production, the transfer of heat to the environment, physiological  adjustments, and body temperature. Heat transfer from the body to the  environment is influenced by factors such as temperature, humidity, air  movement, personal activities, and clothing. The [ANSI/ASHRAE Standard 55-2013: Thermal Environmental Conditions for Human Occupancy](ANSI/ASHRAE Standard 55-2013: Thermal Environmental Conditions for Human Occupancy) specifies the combinations of indoor environmental and personal factors that produce acceptable thermal conditions to a majority of occupants  within a space. Assuming slow air movement *(less  than 40 feet per minute)* and 50% indoor relative humidity, the operative temperatures recommended by ASHRAE range from 68.5ºF to 75ºF in the winter, and from 75ºF to 80.5ºF in the summer. The difference in temperature ranges between the seasons is largely due to clothing selection. ASHRAE also recommends that  indoor relative humidity be maintained at or below 65%. [The U.S. Environmental Protection Agency *(EPA)*](https://www.epa.gov) recommends maintaining indoor relative humidity between 30 and 60% to reduce mold growth. 
 
 enviroSense and MOVASIM's Platfom is uses the MQTT protocol to communicate with MOVASIM's Platform. Periodically, the device sends reports to the platfom with sensors information. For more technical information click on the specific enviroSense version.
+
+
 
 
 
@@ -89,6 +93,8 @@ Below is the BOM for eSense Rubino PCB assembly. For Protoboard assembly, check 
 ### Power Supply specifications
 
 eSense Rubino could be powered with almost any Mobile Phone battery charger, as it only drains 100 mA CC. It uses the on-board MicroB USB connector provided by NodeMCU board. 
+
+
 
 
 
@@ -151,6 +157,8 @@ The IAQ accuracy is reflects the current state of the background sensor calibrat
 - **IAQ Accuracy = 3** means BSEC calibrated successfully.
 
 IoTek-enviro service takes care of dealing with IAQ Accuracy parameter, showing in the Dashboard high-levell information for the end user.
+
+
 
 
 
@@ -228,11 +236,15 @@ The module that we use for eSense Rubino could be GY-30/GY-302, depending on mar
 
 
 
-## Protoboard Asembly
+
+
+## Protoboard Assembly
 
 Atrough we have released a PCB version for eSense Rubino that can be downloaded and assembled, it is also possible to build the device in a Protoboard, as seen in the images below. The only difference when buying components, is to get a NeoPixel Module instead of the standalone component version *(so you don't need to buy the NeoPixel LED nor both capacitors C1 and C2, as they will be part of the Module)*. Also, there is no need for the Jumper, as ca be simulared just with a cable.
 
 ![images/eSense-Rubino-Proto.png](images/eSense-Rubino-Proto.png)
+
+
 
 
 
