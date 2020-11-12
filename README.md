@@ -3,7 +3,7 @@
 
 **eSense** **Rubino** has been designed to work with the **IoTek-enviro** service provided by [MOVASIM](http://movasim.com/). This service focuses on monitoring human well-being conditions for several scenarios *(for instance offices, buildings, factories, senior living, universities and schools).* 
 
-**eSense Rubino** is mainly used for testing, demos and small deployments where no industrial devices are requiered. We published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek-enviro** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Assembly), on a [PCB](#eSense-Rubino-Schematic\,-PCB\,-BOM-and-Power-Supply-specs), or get completely [assembled by us](mailto:info@movasim.com).
+**eSense Rubino** is mainly used for testing, demos and small deployments where no industrial devices are requiered. We published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek-enviro** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Assembly), on a [PCB](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs), or get completely [assembled by us](mailto:info@movasim.com).
 
 ![images/eSense-Rubino.png](images/eSense-Rubino-PCB.png)
 
