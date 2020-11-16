@@ -13,16 +13,15 @@
 
 
 ## Table of Contents
-[Feature Description](#Feature-Description)
-[eSense Rubino Schematic, PCB, BOM and Power Supply specs](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs)
-	[Bill of Materials](#Bill-of-Materials)
-	[Power Supply specifications](#Power-Supply-specifications)
-[Bosch BME680 Sensor](#Bosch-BME680-Sensor)
-[ROHM BH1750 Sensor](#ROHM-BH1750-Sensor)
-[Protoboard Assembly Option](#Protoboard-Assembly-Option)
-[Functional Description](#Functional-Description)
-[Firmware Options](#Firmware-Options)
-[License](#License)
+- [Feature Description](#Feature-Description)
+- [eSense Rubino Schematic, PCB, BOM and Power Supply specs](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs)
+  - [Bill of Materials](#Bill-of-Materials)
+  - [Power Supply specifications](#Power-Supply-specifications)
+- [Bosch BME680 Sensor](#Bosch-BME680-Sensor)
+- [ROHM BH1750 Sensor](#ROHM-BH1750-Sensor)
+- [Protoboard Assembly Option](#Protoboard-Assembly-Option)
+- [Functional Description](#Functional-Description)
+- [License](#License)
 
 
 
