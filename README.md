@@ -11,11 +11,20 @@
 
 
 
+
 ## Table of Contents
+[Feature Description](#Feature-Description)
+[eSense Rubino Schematic, PCB, BOM and Power Supply specs](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs)
+	[Bill of Materials](#Bill-of-Materials)
+	[Power Supply specifications](#Power-Supply-specifications)
+[Bosch BME680 Sensor](#Bosch-BME680-Sensor)
+[ROHM BH1750 Sensor](#ROHM-BH1750-Sensor)
+[Protoboard Assembly Option](#Protoboard-Assembly-Option)
+[Functional Description](#Functional-Description)
+[Firmware Options](#Firmware-Options)
+[License](#License)
 
-------
 
-[TOC]
 
 ## Feature Description
 
@@ -37,22 +46,14 @@ Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color c
 |  251-350  |  Severely polluted   |   Magenta    | More severe health issue possible if  harmful VOC present.   | Contamination should be identified if level is reached even  w/o presence of people; maximize  ventilation & reduce attendance. |
 |   > 350   |  Extremely polluted  |     Pink     | Headaches, additional neurotoxic effects  possible.          | Contamination needs to be  identified; avoid presence in room  and maximize ventilation. |
 
- 
-
-NeoPixel LED also indicates if the device is connected to the WiFi Network as well as if the Gas Sensor is in "Calibrating Mode". 
-
-
+ NeoPixel LED also indicates if the device is connected to the WiFi Network as well as if the Gas Sensor is in "Calibrating Mode". 
 
 | Color.Coding | Meaning                                                      |
 | :----------: | ------------------------------------------------------------ |
 |    White     | The device is in WiFi Acces Point (AP) Mode or trying to connect to the WiFi network with the latest provided credentials. |
 |     Blue     | The device is connected to the selected WiFi Network, and BME680 sensor is calibrating *(IAQ Accuracy = 0)*. See [BME680 Sensor](#Bosch-BME680-Sensor) for detailed information. |
 
-
-
 **eSense Rubino** also integrates a Luxometer to measure ambient lighting quality, which is interpreted by **MOVASIM's IoTek-enviro** service based on [**European Standard EN 12464-1**](https://www.en-standard.eu/din-en-12464-1-light-and-lighting-lighting-of-work-places-part-1-indoor-work-places/?mena=8) to display the **Ambient Lighting Quality Indicator**. This standard highlights the minimum illuminance requirements of specific areas, as described in the following table:
-
-
 
 | Area                              | Lux  |
 | --------------------------------- | ---- |
@@ -77,11 +78,7 @@ eSense Rubino Schematic and PCB design have been developed with [EasyEDA](https:
 
 ![eSense-Rubino-Schematic](images/eSense-Rubino-Schematic.png)
 
-
-
 The PCB was designed in two layers for easy assembly. It has a Jumper *(JP1)* that switches the device from "Debug Mode" to "Production Mode". In "Debug Mode" useful information is printed to the device serial port, so when connected to a computer, tuning, troubleshhoting and debuging tasks can be performed.
-
-
 
 ![eSense-Rubino-PCB-Design](images/eSense-Rubino-PCB-Design.png)
 
@@ -250,7 +247,7 @@ Atrough we have released a PCB version for eSense Rubino that can be downloaded 
 
 
 
-## Funtional Description
+## Functional Description
 
 The first time the device gets powered on, it will enter into Acces Point *(AP)* Mode. This allows the user to connect to it with any WiFi enabled device *(Mobile Phone, Tablet, Notebook, etc.)* in order to configure the WiFi credentials that eSense Rubino should use to connect to the network.
 
@@ -258,11 +255,7 @@ The first time the device gets powered on, it will enter into Acces Point *(AP)*
 
 As shown in the screens below, we select "eSense-XXXX" from the list of available WiFi Networks to connect to, and enter the Password that was defined in the corresponding [Firmware](#Firmware-Options) that have been loaded into eSense Rubino.
 
-
-
 ![eSense-Rubino-Functional-Description-1](images/eSense-Rubino-Functional-Description-1.png) 
-
-
 
 Once the connection is established, the device will normally present a page like the one shown in screenshot #3. In case the redirection is not automatic, we must point the browser to the IP 192.168.4.1.
 
@@ -270,11 +263,7 @@ In the eSense configuration screen, we have to select "Configure WiFi" so the de
 
 From then on, we just select the WiFi Network where we want eSense Rubino to connect to, enter the corresponding Password and hit "Save", as can be seen in screenshots #4 and 5.  The device will then restart and if it gets to successfully connect to the specified WiFi network , it will start to communicate with IoTek-enviro Service.
 
-
-
 ![eSense-Rubino-Functional-Description-2](images/eSense-Rubino-Functional-Description-2.png)
-
-
 
 Otherwise, i the device cannot connect to the specified WiFi Network *(for any reason, for example, wrong password)*, it will switch to WiFi AP Mode again, to let us retart the configuration process.
 
