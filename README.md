@@ -3,13 +3,19 @@
 
 **eSense** **Rubino** has been designed to work with the **IoTek-enviro** service provided by [MOVASIM](http://movasim.com/). This service focuses on monitoring human well-being conditions for several scenarios *(for instance offices, buildings, factories, senior living, universities and schools).* 
 
-**eSense Rubino** is mainly used for testing, demos and small deployments where no industrial devices are requiered. We published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek-enviro** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Assembly), on a [PCB](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs), or get completely [assembled by us](mailto:info@movasim.com).
+**eSense Rubino** is mainly used for testing, demos and small deployments where no industrial devices are requiered. We published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek-enviro** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Assembly-Option), on a [PCB](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs), or get completely [assembled by us](mailto:info@movasim.com).
 
 ![images/eSense-Rubino.png](images/eSense-Rubino-PCB.png)
 
 **eSense Rubino** measures **Air Quality**, Ambient **Lighting**, **Temperature**,   **Humidity** and  **Pressure**. It uses WiFi as communication channel, making it convenient for most indoor installations.
 
 
+
+## Table of Contents
+
+------
+
+[TOC]
 
 ## Feature Description
 
@@ -31,14 +37,22 @@ Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color c
 |  251-350  |  Severely polluted   |   Magenta    | More severe health issue possible if  harmful VOC present.   | Contamination should be identified if level is reached even  w/o presence of people; maximize  ventilation & reduce attendance. |
 |   > 350   |  Extremely polluted  |     Pink     | Headaches, additional neurotoxic effects  possible.          | Contamination needs to be  identified; avoid presence in room  and maximize ventilation. |
 
- NeoPixel LED also indicates if the device is connected to the WiFi Network as well as if the Gas Sensor is in "Calibrating Mode". 
+ 
+
+NeoPixel LED also indicates if the device is connected to the WiFi Network as well as if the Gas Sensor is in "Calibrating Mode". 
+
+
 
 | Color.Coding | Meaning                                                      |
 | :----------: | ------------------------------------------------------------ |
 |    White     | The device is in WiFi Acces Point (AP) Mode or trying to connect to the WiFi network with the latest provided credentials. |
 |     Blue     | The device is connected to the selected WiFi Network, and BME680 sensor is calibrating *(IAQ Accuracy = 0)*. See [BME680 Sensor](#Bosch-BME680-Sensor) for detailed information. |
 
+
+
 **eSense Rubino** also integrates a Luxometer to measure ambient lighting quality, which is interpreted by **MOVASIM's IoTek-enviro** service based on [**European Standard EN 12464-1**](https://www.en-standard.eu/din-en-12464-1-light-and-lighting-lighting-of-work-places-part-1-indoor-work-places/?mena=8) to display the **Ambient Lighting Quality Indicator**. This standard highlights the minimum illuminance requirements of specific areas, as described in the following table:
+
+
 
 | Area                              | Lux  |
 | --------------------------------- | ---- |
@@ -63,7 +77,11 @@ eSense Rubino Schematic and PCB design have been developed with [EasyEDA](https:
 
 ![eSense-Rubino-Schematic](images/eSense-Rubino-Schematic.png)
 
+
+
 The PCB was designed in two layers for easy assembly. It has a Jumper *(JP1)* that switches the device from "Debug Mode" to "Production Mode". In "Debug Mode" useful information is printed to the device serial port, so when connected to a computer, tuning, troubleshhoting and debuging tasks can be performed.
+
+
 
 ![eSense-Rubino-PCB-Design](images/eSense-Rubino-PCB-Design.png)
 
@@ -71,7 +89,7 @@ The PCB was designed in two layers for easy assembly. It has a Jumper *(JP1)* th
 
 ### Bill of Materials
 
-Below is the BOM for eSense Rubino PCB assembly. For Protoboard assembly, check the [Protoboard Assembly](#Protoboard-Assembly) section.
+Below is the BOM for eSense Rubino PCB assembly. For Protoboard assembly, check the [Protoboard Assembly](#Protoboard-Assembly-Option) section.
 
 | ID   | Name          | Designator | Footprint               | Quantity |
 | ---- | ------------- | ---------- | ----------------------- | -------- |
@@ -102,7 +120,7 @@ According to [Bosch](https://community.bosch-sensortec.com/t5/Bosch-Sensortec-Co
 
 
 
-It is  especially developed for applications where size  and low power consumption are critical requirements. In order to  measure air quality for personal wellbeing the gas sensor within the  BME680 can detect a broad range of gases such as volatile organic  compounds *(VOC)*.
+It is  especially developed for applications where size  and low power consumption are critical requirements. In order to  measure air quality for personal wellbeing the gas sensor within the  BME680 can detect a broad range of gases such as volatile organic  compounds *(VOC)*. The module that we use for eSense Rubino is CJMCU-680.
 
 **Main sensor characteristics:**
 
@@ -162,7 +180,7 @@ The BH1750 Ambient Light Sensor Module  is based on the digital Ambient Light Se
 
 ![GY-302](images/GY-302.jpg)
 
-Unlike other light level measurement systems, such as LDR resistors, the spectral response of the BH1750 is **designed to be similar to the human eye**.
+Unlike other light level measurement systems, such as LDR resistors, the spectral response of the BH1750 is **designed to be similar to the human eye**. The module that we use for eSense Rubino is GY-302.
 
 **Main sensor characteristics:**
 
@@ -204,11 +222,7 @@ Each mode has three different precisions:
 - High Resolution Mode - *(1 lx precision, 120ms measurement time)*
 - High Resolution Mode 2 - *(0.5 lx precision, 120ms measurement time)*
 
-**eSense Rubino** uses [Christopher Laws](https://github.com/claws/BH1750) to manage BH1750 sensor. This library uses by defaul "Continuous High Resolution Mode.
-
-![GY-302](images/GY-302.jpg)
-
-The module that we use for eSense Rubino could be GY-30/GY-302, depending on market stock. Both modules are exactly the same from the poinout and characteristics point of view. They differ only in size.
+eSense Rubino uses [Christopher Laws](https://github.com/claws/BH1750) to manage BH1750 sensor. This library uses by defaul "Continuous High Resolution Mode.
 
 **Connections:**
 
@@ -228,11 +242,52 @@ The module that we use for eSense Rubino could be GY-30/GY-302, depending on mar
 
 
 
-## Protoboard Assembly
+## Protoboard Assembly Option
 
 Atrough we have released a PCB version for eSense Rubino that can be downloaded and assembled, it is also possible to build the device in a Protoboard, as seen in the images below. The only difference when buying components, is to get a NeoPixel Module instead of the standalone component version *(so you don't need to buy the NeoPixel LED nor both capacitors C1 and C2, as they will be part of the Module)*. Also, there is no need for the Jumper, as ca be simulared just with a cable.
 
 ![images/eSense-Rubino-Proto.png](images/eSense-Rubino-Proto.png)
+
+
+
+## Funtional Description
+
+The first time the device gets powered on, it will enter into Acces Point *(AP)* Mode. This allows the user to connect to it with any WiFi enabled device *(Mobile Phone, Tablet, Notebook, etc.)* in order to configure the WiFi credentials that eSense Rubino should use to connect to the network.
+
+**Important:** In order to be able to identify each device in a multi-eSense-devices environment, each device adds the last four characters of their MAC address to "eSense", so the complete SSID will be unique for each particular device.
+
+As shown in the screens below, we select "eSense-XXXX" from the list of available WiFi Networks to connect to, and enter the Password that was defined in the corresponding [Firmware](#Firmware-Options) that have been loaded into eSense Rubino.
+
+
+
+![eSense-Rubino-Functional-Description-1](images/eSense-Rubino-Functional-Description-1.png) 
+
+
+
+Once the connection is established, the device will normally present a page like the one shown in screenshot #3. In case the redirection is not automatic, we must point the browser to the IP 192.168.4.1.
+
+In the eSense configuration screen, we have to select "Configure WiFi" so the device will scan all available WiFi Networks, and present us the list shown in screenshot #4.
+
+From then on, we just select the WiFi Network where we want eSense Rubino to connect to, enter the corresponding Password and hit "Save", as can be seen in screenshots #4 and 5.  The device will then restart and if it gets to successfully connect to the specified WiFi network , it will start to communicate with IoTek-enviro Service.
+
+
+
+![eSense-Rubino-Functional-Description-2](images/eSense-Rubino-Functional-Description-2.png)
+
+
+
+Otherwise, i the device cannot connect to the specified WiFi Network *(for any reason, for example, wrong password)*, it will switch to WiFi AP Mode again, to let us retart the configuration process.
+
+
+
+## Firmware Options
+
+These are the currently available Firmware options for **eSense Rubino**.
+
+| Name                                                         | Flavor                                  | License                                                      |
+| ------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------------------ |
+| [eSense-Rubino-FW-Basic-Auth](https://github.com/movasim/eSense-Rubino-FW-Basic-Auth) | Basic Authentication *(User/Password)*. | [GPL v3.0](https://github.com/movasim/eSense-Rubino-FW-Basic-Auth/blob/main/LICENSE) |
+
 
 
 
