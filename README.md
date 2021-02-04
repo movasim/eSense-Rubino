@@ -36,11 +36,11 @@ Based on [Bosch's BSEC Library algorithm](https://github.com/BoschSensortec/BSEC
 
 Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color coding can se seen below:
 
-| IAQ.Index | Air.Quality | Color.Coding | Situation      |
-| :-------: | :---------: | :----------: | :------------- |
-|   0-50    |    Good     |    Green     | Healthy        |
-|  51-150   |    Fair     |    Yellow    | Unhealthy      |
-|   >=151   |    Poor     |     Red      | Very Unhealthy |
+| IAQ.Index  | Air.Quality | Color.Coding | Situation      |
+| :--------: | :---------: | :----------: | :------------- |
+|  0<IAQ<50  |    Good     |    Green     | Healthy        |
+| 51<IAQ<150 |    Fair     |    Yellow    | Unhealthy      |
+|  IAQ>=151  |    Poor     |     Red      | Very Unhealthy |
 
  NeoPixel LED also indicates if the device is connected to the WiFi Network as well as if the Gas Sensor is in "Calibrating Mode". 
 
@@ -281,12 +281,13 @@ These are the currently available Firmware options for **eSense Rubino**.
 
 | Name                                                         | Flavor                                  | License                                                      |
 | ------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------------------ |
-| [eSense-Rubino-FW-Basic-Auth](https://github.com/movasim/eSense-Rubino-FW-Basic-Auth) | Basic Authentication *(User/Password)*. | [GPL v3.0](https://github.com/movasim/eSense-Rubino-FW-Basic-Auth/blob/main/LICENSE) |
+| [eSense-Rubino-FW-Basic-Auth](https://github.com/movasim/eSense-Rubino-FW-Basic-Auth) | Basic Authentication *(User/Password)*. | [MIT](https://github.com/movasim/eSense-Rubino-FW-Basic-Auth/blob/main/LICENSE) |
 
 
 
 
 ## License
 
-**eSense Rubino** by **[MOVASIM](https://movasim.com/)** is licensed under the [MIT License](https://creativecommons.org/licenses/by-sa/4.0/).
+**eSense Rubino** by **[MOVASIM](https://movasim.com/)** is licensed under the [MIT License](https://github.com/movasim/eSense-Rubino/blob/master/LICENSE).
 
+![](images/MIT.svg)
