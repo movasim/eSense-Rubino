@@ -1,9 +1,9 @@
 # eSense Rubino
 ### Environmental Sensing Device based on Espressif ESP8266, Bosch BME680 and ROHM BH1750.
 
-**eSense** **Rubino** has been designed to work with the **IoTek** service provided by [MOVASIM](https://movasim.com/). This service focuses on monitoring human well-being conditions for several scenarios *(for instance homes, offices, buildings, factories, senior living, universities and schools).* 
+**eSense** **Rubino** has been designed to work with the **IoTek** service provided by [**MOVASIM**](https://movasim.com/). This service focuses on monitoring human well-being conditions for several scenarios *(for instance homes, offices, buildings, factories, senior living, universities and schools).* 
 
-**eSense Rubino** is published it under the Open Source Hardware and Software licenses, so anybody can build it and test **IoTek** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Assembly-Option), on a [PCB](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs), or get completely [assembled by us](https://movasim.com/contact-us/).
+**eSense Rubino** is published it under the Open Source Hardware and Software licenses, so anybody can build it and test it with **IoTek** service. Whith this purpose, **eSense Rubino** could be mounted on a [protoboard](#Protoboard-Assembly-Option), on a [PCB](#eSense-Rubino-Schematic-PCB-BOM-and-Power-Supply-specs), or get completely [assembled by us](https://movasim.com/contact-us/).
 
 ![images/eSense-Rubino.png](images/eSense-Rubino-PCB.png)
 
@@ -49,7 +49,7 @@ Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color c
 |    White     | The device is in WiFi Acces Point (AP) Mode or trying to connect to the WiFi network with the latest provided credentials. |
 |     Blue     | The device is connected to the selected WiFi Network, and BME680 sensor is calibrating *(IAQ Accuracy = 0)*. See [BME680 Sensor](#Bosch-BME680-Sensor) for detailed information. |
 
-**eSense Rubino** also integrates a Luxometer to measure ambient lighting quality, which is interpreted by MOVASIM's IoTek service based on [**European Standard EN 12464-1**](https://www.en-standard.eu/din-en-12464-1-light-and-lighting-lighting-of-work-places-part-1-indoor-work-places/?mena=8) to display the **Ambient Lighting Quality Indicator**. This standard highlights the minimum illuminance requirements of specific areas, as described in the following table:
+**eSense Rubino** also integrates a Luxometer to measure ambient lighting quality, which is interpreted by [**MOVASIM**](https://movasim.com/) IoTek service based on [**European Standard EN 12464-1**](https://www.en-standard.eu/din-en-12464-1-light-and-lighting-lighting-of-work-places-part-1-indoor-work-places/?mena=8) to display the **Ambient Lighting Quality Indicator**. This standard highlights the minimum illuminance requirements of specific areas, as described in the following table:
 
 | Area                              | Lux  |
 | --------------------------------- | ---- |
