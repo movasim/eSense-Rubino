@@ -36,11 +36,11 @@ Based on [Bosch's BSEC Library algorithm](https://github.com/BoschSensortec/BSEC
 
 Based on IAQ Index, Color Coding is shown by eSense with a NeoPixel LED. Color coding can se seen below:
 
-| IAQ.Index  | Air.Quality | Color.Coding | Situation      |
-| :--------: | :---------: | :----------: | :------------- |
-|  0<IAQ<50  |    Good     |    Green     | Healthy        |
-| 51<IAQ<150 |    Fair     |    Yellow    | Unhealthy      |
-|  IAQ>=151  |    Poor     |     Red      | Very Unhealthy |
+| IAQ.Index  | Air.Quality | Color.Coding |
+| :--------: | :---------: | :----------: |
+|  0<IAQ<50  |    Good     |    Green     |
+| 51<IAQ<150 |    Fair     |    Yellow    |
+|  IAQ>=151  |    Poor     |     Red      |
 
  NeoPixel LED also indicates if the device is connected to the WiFi Network as well as if the Gas Sensor is in "Calibrating Mode". 
 
